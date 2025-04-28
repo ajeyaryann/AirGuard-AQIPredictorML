@@ -16,6 +16,14 @@ gdown.download(url, output, quiet=False)
 
 df = pd.read_csv(output)
 
+file_id = '18TLIGR6hMN7jpB33rRJPC6rJ35fs5slZ'
+url = f'https://drive.google.com/uc?id = {file_id}'
+
+users_output = 'users.csv'
+gdown.download(url, output, quiet=False)
+
+df = pd.read_csv(users_output)
+
 
 # Load ML model
 with open('models/air_quality_model.pkl', 'rb') as f:
