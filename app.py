@@ -3,9 +3,19 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import gdown
 
 import signup as signup_page
 import login as login_page
+
+file_id = '1rdTvIw7qMroBYYvqfEpKJFx2ot38ZmHa'
+url = f'https://drive.google.com/uc?id = {file_id}'
+
+output = 'air_quality_dataset.csv'
+gdown.download(url, output, quiet=False)
+
+df = pd.read_csv(output)
+
 
 # Load ML model
 with open('models/air_quality_model.pkl', 'rb') as f:
