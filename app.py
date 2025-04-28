@@ -8,21 +8,6 @@ import gdown
 import signup as signup_page
 import login as login_page
 
-file_id = '1rdTvIw7qMroBYYvqfEpKJFx2ot38ZmHa'
-url = f'https://drive.google.com/uc?id = {file_id}'
-
-output = 'air_quality_dataset.csv'
-gdown.download(url, output, quiet=False)
-
-df = pd.read_csv(output)
-
-file_id = '18TLIGR6hMN7jpB33rRJPC6rJ35fs5slZ'
-url = f'https://drive.google.com/uc?id = {file_id}'
-
-users_output = 'users.csv'
-gdown.download(url, output, quiet=False)
-
-df = pd.read_csv(users_output)
 
 
 # Load ML model
